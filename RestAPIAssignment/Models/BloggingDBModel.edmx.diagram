@@ -4,9 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d2a3980809b642a6945cdf0cb3f6be30" Name="Diagram1">
+      <Diagram DiagramId="efd5c88d6f06448c9deca630f0ea57a5" Name="Diagram1">
         <EntityTypeShape EntityType="BloggingDBModel.Comment" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="BloggingDBModel.Post" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BloggingDBModel.User" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <AssociationConnector Association="BloggingDBModel.FK_Comments_Posts" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
