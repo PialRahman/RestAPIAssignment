@@ -16,10 +16,13 @@ namespace RestAPIAssignment.Models
 
     public partial class Post
     {
+      
         public int PostID { get; set; }
         public string Post1 { get; set; }
-        [JsonIgnore, XmlIgnore]
+    
+        [JsonIgnore,XmlIgnore]
         public virtual Comment Comment { get; set; }
-        public int CommentID { get; internal set; }
+        public int CommentID { get; set; }
+      
     }
 }

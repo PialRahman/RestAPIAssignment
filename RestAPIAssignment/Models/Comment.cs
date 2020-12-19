@@ -20,7 +20,7 @@ namespace RestAPIAssignment.Models
         public string Comment1 { get; set; }
     
         public int PostID { get; set; }
-        [JsonIgnore, XmlIgnore]
+        [XmlIgnore]
         public virtual Post Post { get; set; }
     }
 }

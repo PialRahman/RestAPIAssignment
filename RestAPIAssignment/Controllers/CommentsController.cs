@@ -9,6 +9,7 @@ using System.Web.Http;
 
 namespace RestAPIAssignment.Controllers
 {
+  
     public class CommentsController : ApiController
     {
         CommentRepository commentRepository = new CommentRepository();
@@ -18,18 +19,18 @@ namespace RestAPIAssignment.Controllers
         }
         public IHttpActionResult Get(int id)
         {
-            var comment = commentRepository.Get(id);
+            var comment = commentRepository.GetCommentsByPostID(id);
             if (comment == null)
             {
                 return StatusCode(HttpStatusCode.NoContent);
             }
-            return Ok(commentRepository.Get(id));
+            return Ok(commentRepository.GetCommentsByPostID(id));
         }
 
         public IHttpActionResult Post(Comment comment)
         {
             commentRepository.Insert(comment);
-            return Created("api/posts/" + comment.CommentID, comment);
+            return Created("api/comments/" + comment.CommentID, comment);
         }
         public IHttpActionResult Put([FromUri]int id, [FromBody]Post comment)
         {

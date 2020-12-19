@@ -8,6 +8,7 @@ namespace RestAPIAssignment.Repositories
 {
     public class PostRepository : Repository<Post>
     {
+       
         internal object Get()
         {
             throw new NotImplementedException();

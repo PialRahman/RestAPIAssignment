@@ -13,11 +13,11 @@ namespace RestAPIAssignment.Repositories
         protected BloggingDBEntities context = new BloggingDBEntities();
         public void Delete(int id)
         {
-            this.context.Set<T>().Remove(Get(id));
+            this.context.Set<T>().Remove(GetCommentsByPostID(id));
             this.context.SaveChanges();
         }
 
-        public T Get(int id)
+        public T GetCommentsByPostID(int id)
         {
             return this.context.Set<T>().Find(id);
         }
