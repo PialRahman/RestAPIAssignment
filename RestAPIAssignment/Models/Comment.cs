@@ -9,15 +9,18 @@
 
 namespace RestAPIAssignment.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
-    
+    using System.Xml.Serialization;
+
     public partial class Comment
     {
         public int CommentID { get; set; }
         public string Comment1 { get; set; }
-        public int PostID { get; set; }
     
+        public int PostID { get; set; }
+        [JsonIgnore, XmlIgnore]
         public virtual Post Post { get; set; }
     }
 }

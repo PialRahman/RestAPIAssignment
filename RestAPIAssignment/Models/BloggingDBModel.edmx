@@ -91,7 +91,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="BloggingDBContext5" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BloggingDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Comments" EntityType="Self.Comment" />
           <EntitySet Name="Posts" EntityType="Self.Post" />
           <EntitySet Name="Users" EntityType="Self.User" />
@@ -105,7 +105,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BloggingDBModelStoreContainer" CdmEntityContainer="BloggingDBContext5">
+        <EntityContainerMapping StorageEntityContainer="BloggingDBModelStoreContainer" CdmEntityContainer="BloggingDBEntities">
           <EntitySetMapping Name="Comments">
             <EntityTypeMapping TypeName="BloggingDBModel.Comment">
               <MappingFragment StoreEntitySet="Comments">

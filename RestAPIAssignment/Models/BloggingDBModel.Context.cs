@@ -9,14 +9,16 @@
 
 namespace RestAPIAssignment.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
-    public partial class BloggingDBContext5 : DbContext
+    using System.Xml.Serialization;
+
+    public partial class BloggingDBEntities : DbContext
     {
-        public BloggingDBContext5()
-            : base("name=BloggingDBContext5")
+        public BloggingDBEntities()
+            : base("name=BloggingDBEntities")
         {
         }
     
@@ -24,9 +26,11 @@ namespace RestAPIAssignment.Models
         {
             throw new UnintentionalCodeFirstException();
         }
-    
+    [JsonIgnore,XmlIgnore]
         public virtual DbSet<Comment> Comments { get; set; }
+        [JsonIgnore, XmlIgnore]
         public virtual DbSet<Post> Posts { get; set; }
+        [JsonIgnore, XmlIgnore]
         public virtual DbSet<User> Users { get; set; }
     }
 }

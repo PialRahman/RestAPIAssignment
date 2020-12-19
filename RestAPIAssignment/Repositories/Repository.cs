@@ -1,5 +1,4 @@
 ﻿using RestAPIAssignment.Models;
-using RestAPIAssignment.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -7,11 +6,11 @@ using System.Linq;
 using System.Web;
 using System.Web.ModelBinding;
 
-namespace Inventory_with_Repository_Pattern.Repositories
+namespace RestAPIAssignment.Repositories
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        protected BloggingDBContext5 context = new BloggingDBContext5();
+        protected BloggingDBEntities context = new BloggingDBEntities();
         public void Delete(int id)
         {
             this.context.Set<T>().Remove(Get(id));

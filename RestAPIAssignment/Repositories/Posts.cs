@@ -1,4 +1,4 @@
-﻿namespace Inventory_with_Repository_Pattern.Repositories
+﻿namespace RestAPIAssignment.Repositories
 {
     public class Posts
     {

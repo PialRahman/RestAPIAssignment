@@ -37,7 +37,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="BloggingDBContext5" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="BloggingDBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Comments" EntityType="Self.Comment" />
     <EntitySet Name="Posts" EntityType="Self.Post" />
     <EntitySet Name="Users" EntityType="Self.User" />

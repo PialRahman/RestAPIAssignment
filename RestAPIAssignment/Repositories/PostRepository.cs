@@ -1,12 +1,16 @@
-﻿//using Inventory_with_Repository_Pattern.Models;
+﻿using RestAPIAssignment.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Inventory_with_Repository_Pattern.Repositories
+namespace RestAPIAssignment.Repositories
 {
-    public class CategoryRepository:Repository<Posts>
+    public class PostRepository : Repository<Post>
     {
+        internal object Get()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

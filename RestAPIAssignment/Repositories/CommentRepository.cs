@@ -1,17 +1,24 @@
-﻿//using Inventory_with_Repository_Pattern.Models;
+﻿using RestAPIAssignment.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.UI.WebControls;
 
-namespace Inventory_with_Repository_Pattern.Repositories
+namespace RestAPIAssignment.Repositories
 {
-    public class ProductRepository:Repository<Comments>
-    {
-        public List<Comments> GetTopProducts(int top)
+  
+    
+        public class CommentRepository : Repository<Comment>
         {
-            return this.GetAll().OrderByDescending(x => x.Price).Take(top).ToList();
+            internal object Get()
+            {
+                throw new NotImplementedException();
+            }
+
+        internal void Update(Post comment)
+        {
+            throw new NotImplementedException();
         }
     }
+    
 }
